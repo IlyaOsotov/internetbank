@@ -1,0 +1,3 @@
+class PassbooksController < ApplicationController
+
+end

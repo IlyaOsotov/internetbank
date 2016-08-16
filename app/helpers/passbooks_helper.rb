@@ -1,0 +1,2 @@
+module PassbooksHelper
+end

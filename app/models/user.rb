@@ -11,11 +11,7 @@ class User < ApplicationRecord
   after_create :new_passbook
 
   def new_passbook
-    @pass = Passbook.new
-    @pass.number = @pass.id
-    @pass.currency = 0
-    @pass.user_id = User.last.id
-    @pass.save
+    Passbook.create(user_id: User.last.id, currency: 0)
   end
 
 end
